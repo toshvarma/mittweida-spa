@@ -1,4 +1,5 @@
 # Mittweida SPA
+### This contains documentation on the tools used for the SPA, how to access it on your phone, as well as the API Documentation.
 
 Hello, this is Tosh Varma's Mittweida Single Page Application
  built with **React**, **Vite**, and **NestJS** 
@@ -106,7 +107,25 @@ On your phone, open your browser and go to:
 
 http://192.168.0.14:5173 <- (Replace with the actual IP)
 
-### Clone the repo here
+<hr>
+
+## API Documentation
+You can explore the backend API using Swagger UI:
+
+ `http://<your-ip>:3000/api`
+
+(Note: This only works if your backend is running and you're on the same WiFi.)
+
+Example (with placeholder IP): `http://192.168.0.14:3000/api`
+<br>
+Or 
+<br>
+use localhost for development: `http://localhost:3000/api`
+
+<hr>
+
+
+# Clone the repo here!
 
 <hr>
 
