@@ -1,4 +1,4 @@
-// src/components/location-card/LocationCard.tsx
+
 import "./locationcard.css";
 import { useLocation } from "wouter";
 
@@ -9,6 +9,7 @@ interface LocationCardProps {
     imageUrl: string;
 }
 
+// This component was re-used throughout the website to display the various places of interest
 export default function LocationCard({ id, title, description, imageUrl }: LocationCardProps) {
     const [, navigate] = useLocation();
 

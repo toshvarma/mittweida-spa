@@ -1,4 +1,4 @@
-/* === General Sans - All Variants === */
+/* The font I used is General Sans */
 @font-face {
     font-family: 'General Sans';
     src: url('../public/fonts/GeneralSans-Extralight.otf') format('opentype');
@@ -95,7 +95,7 @@
     font-display: swap;
 }
 
-/* === Global Defaults === */
+/* These are all my global settings */
 * {
     box-sizing: border-box;
     margin: 0;

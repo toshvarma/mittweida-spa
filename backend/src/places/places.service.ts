@@ -60,7 +60,7 @@ export class PlacesService {
         },
     ];
 
-    private savedPlacesByUser: Record<string, string[]> = {}; // username → placeId[]
+    private savedPlacesByUser: Record<string, string[]> = {}; // username -> placeId[]
 
     getAll(): Place[] {
         return this.places;

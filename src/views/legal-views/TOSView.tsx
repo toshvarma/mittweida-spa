@@ -3,6 +3,7 @@ import Header from "../../header/Header.tsx";
 import Footer from "../../footer/Footer.tsx";
 import "./legalview.css";
 
+// PLACEHOLDER TEXT CONTENT
 export default function TOSView() {
     return (
         <div className="legal-page">

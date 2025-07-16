@@ -6,7 +6,7 @@ import "./homeview.css";
 
 export default function HomeView() {
     const [, navigate] = useLocation();
-    const [isLoggedIn] = useState(false); // Replace with real auth logic
+    const [isLoggedIn] = useState(false);
 
     return (
         <div className="home">

@@ -10,7 +10,7 @@
 }
 
 .background-wrapper {
-    position: absolute; /* Was: fixed */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -41,7 +41,7 @@
     position: relative;
     z-index: 1;
     padding: 120px 24px 40px;
-    flex: 1; /* This makes it expand */
+    flex: 1;
 }
 
 

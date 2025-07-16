@@ -1,4 +1,4 @@
-// src/views/SettingsView.tsx
+
 import "./settingsview.css"
 import LargeButton from "../../buttons/LargeButton.tsx";
 import { useState, useEffect } from "react";
@@ -16,11 +16,11 @@ export default function SettingsView() {
     const handleLogout = () => {
         localStorage.removeItem("user");
         navigate("/");
-    };
+    }; // takes the user to the home page if they click on Log Out
 
     const handleDeleteAccount = () => {
         setError("you cannot delete this account.");
-    };
+    }; // accounts cannot be deleted as of now because there is no code to handle this process properly :/
 
     return (
         <div className="settings-container">

@@ -11,7 +11,7 @@
     padding: 10px 20px;
     z-index: 1000;
     gap: 16px;
-    justify-content: flex-start; /* 👈 Aligns with logo instead of centering all content */
+    justify-content: flex-start;
 }
 
 .header-logo {
@@ -39,7 +39,7 @@
 }
 
 .header-profile {
-    margin-left: auto; /* 👈 Pushes profile icon to the far right */
+    margin-left: auto;
     width: 36px;
     height: 36px;
     border-radius: 50%;

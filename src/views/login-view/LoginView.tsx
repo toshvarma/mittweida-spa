@@ -34,7 +34,7 @@ export default function LoginView() {
     const loginBruteForce = () => {
         console.log("Login button clicked", username, password);
         login(username, password);
-    };
+    }; // this is not ACTUALLY a login brute-force, this is from when I was troubleshooting my login authentication
 
     const devLogin = async (user: string) => {
         try {
@@ -46,7 +46,8 @@ export default function LoginView() {
         } catch (err) {
             setError("Developer login failed.");
         }
-    };
+    }; //devLogin differs from the regular login only in the sense that the regular login is for when you manually input the credentials,
+        // but devLogin is for when you used the preset buttons on the login screen so its faster.
 
     return (
         <div className="search-view">
@@ -108,7 +109,6 @@ export default function LoginView() {
                     </div>
                     <div className="dev-login-tag">login</div>
                 </div>
-
                 <button className="dev-continue" onClick={() => navigate("/")}>
                     continue without logging in
                 </button>

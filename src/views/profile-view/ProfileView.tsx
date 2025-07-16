@@ -1,4 +1,4 @@
-// src/views/ProfileView.tsx
+
 import "./profileview.css";
 import LargeButton from "../../buttons/LargeButton.tsx";
 import { useEffect, useState } from "react";

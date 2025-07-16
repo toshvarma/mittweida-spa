@@ -9,7 +9,8 @@ export default function PlaceDetailView() {
     const [, navigate] = useLocation();
     const { id } = useParams();
     const [place, setPlace] = useState<any>(null);
-
+// loads content based on how this page was reached. This page is reached by clicking "Read More" from a place of
+    // interest, and that content is loaded in here.
     useEffect(() => {
         fetch(`${API_BASE_URL}/places/${id}`)
             .then(res => res.json())

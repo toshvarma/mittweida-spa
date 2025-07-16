@@ -6,7 +6,7 @@ interface TextInputProps {
     value: string
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-
+// differs from SearchInput.tsx, this is for the login and so on
 export default function TextInput({type, placeholder, value, onChange}: TextInputProps) {
     return (
         <input

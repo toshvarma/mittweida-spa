@@ -1,4 +1,4 @@
-// src/views/SavedView.tsx
+
 import "./savedview.css";
 import { useEffect, useState } from "react";
 import LocationCard from "../../components/location-card/LocationCard.tsx";
@@ -20,7 +20,7 @@ export default function SavedView() {
         const username = localStorage.getItem("user");
         if (!username) return;
 
-        const res = await fetch(`${API_BASE_URL}/places/saved/${username}`);
+        const res = await fetch(`${API_BASE_URL}/places/saved/${username}`); // shows all the places saved by that account
         const data = await res.json();
         setPlaces(data);
     };
@@ -33,7 +33,7 @@ export default function SavedView() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, placeId }),
-        });
+        }); // logic for removing places from save
 
         setPlaces(prev => prev.filter(p => p.id !== placeId));
     };
@@ -59,7 +59,7 @@ export default function SavedView() {
                                     title={place.title}
                                     description={place.description}
                                     imageUrl={place.imageUrl}
-                                />
+                                /> {/* Places are saved within the LocationCard.tsx component */}
                             </div>
                         ))}
                     </div>

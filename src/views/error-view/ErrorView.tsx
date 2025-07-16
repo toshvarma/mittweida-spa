@@ -1,4 +1,4 @@
-
+// 404 page
 export default function ErrorView (){
     return (
         <div style={{padding: "2rem", color: "white", textAlign: "center"}}>

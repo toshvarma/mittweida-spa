@@ -11,7 +11,7 @@ export default function Footer({ currentPage }: FooterProps) {
     return (
         <footer className="footer">
             <div className="footer-left">
-                <button
+                <button // puts an underline on the page that is currently clicked
                     className={currentPage === "pp" ? "underline" : ""}
                     onClick={() => navigate("/privacy")}
                 >
@@ -25,8 +25,8 @@ export default function Footer({ currentPage }: FooterProps) {
                 </button>
             </div>
             <div className="footer-right">
-                <img src="/mittfacebook.png" alt="Facebook" />
-                <img src="/mittstagram.png" alt="Instagram" />
+                <img src="/mittfacebook.png" alt="Facebook Logo" />
+                <img src="/mittstagram.png" alt="Instagram Logo" />
             </div>
         </footer>
     );

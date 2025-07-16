@@ -9,8 +9,8 @@ footer {
     align-items: center;
     flex-wrap: wrap;
 
-    position: relative; /* ✅ Ensure it's positioned */
-    z-index: 1; /* ✅ Ensure it's above background */
+    position: relative;
+    z-index: 1;
 }
 
 .footer-left button {

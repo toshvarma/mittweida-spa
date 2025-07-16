@@ -11,7 +11,7 @@
 }
 
 .search-view {
-    padding-top: 100px; /* ensure content starts below the fixed header */
+    padding-top: 100px;
     background-color: #0a192f;
     color: white;
     display: flex;

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import "./header.css";
 
+// this was written to silence a lot of errors that were showing up on pages that had content which updated based on
+    // whether you are logged in or not.
  export interface HeaderProps {
     isLoggedIn2: boolean;
 }
@@ -17,7 +19,7 @@ export default function Header({ }: HeaderProps) {
         } else {
             setProfileImage("/notloggedin.png");
         }
-    }, [location.pathname]); // Re-run on route change
+    }, [location.pathname]);
 
     const isLoggedIn = localStorage.getItem("user") !== null;
 

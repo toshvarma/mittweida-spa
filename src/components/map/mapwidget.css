@@ -4,8 +4,8 @@
 }
 
 .leaflet-top.leaflet-left {
-    top: 100px !important; /* Adjust to match your header height */
-    z-index: 500; /* Keep them above the map but below your header */
+    top: 100px !important; /* I was having some strange issues with leaflet, I had to write this to prevent it from showing up*/
+    z-index: 500;
 }
 
 .popup-content {
@@ -14,7 +14,7 @@
     align-items: center;
     text-align: center;
     max-width: 160px;
-    color: black; /* override default leaflet blue/cyan */
+    color: black;
 }
 
 .popup-title {

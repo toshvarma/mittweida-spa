@@ -14,6 +14,7 @@ interface Place {
     description: string;
     imageUrl: string;
     keywords?: string[];
+    // the keywords? stores certain keywords for each place, so that they show up when you use the search function even with vague searches
 }
 
 export default function SearchView() {
@@ -31,7 +32,7 @@ export default function SearchView() {
 
                 setAllPlaces(data);
 
-                // Only include predefined historic places: IDs 3 and 4
+                // this is hardcoded to show the same two historic places on the search view
                 const historic = data.filter((p: Place) => p.id === "3" || p.id === "4");
                 setHistoricPlaces(historic);
             } catch (err) {
@@ -64,7 +65,7 @@ export default function SearchView() {
             <Header isLoggedIn2 ={false} />
 
             <main className="search-content">
-                {/* Search Bar */}
+                {/* Search Bar Code */}
                 <div className="search-bar-wrapper">
                     <div className="search-bar">
                         <img src="/mittsearchicon.png" alt="Search Icon" />
@@ -99,7 +100,7 @@ export default function SearchView() {
                     )}
                 </div>
 
-                {/* Happening Nearby */}
+                {/* Happening Nearby (The Map Embed) Code */}
                 <h2 className="section-title">Happening Nearby</h2>
                 <div className="map-container">
                     <div className="map-overlay" />
@@ -109,7 +110,7 @@ export default function SearchView() {
                     </button>
                 </div>
 
-                {/* Historic Locations */}
+                {/* Historic Locations (Same 2 places) Code */}
                 <h2 className="section-title">Historic Locations</h2>
                 <div className="location-cards">
                     {historicPlaces.map(place => (
