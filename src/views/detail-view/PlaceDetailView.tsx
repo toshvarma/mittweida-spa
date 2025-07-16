@@ -3,6 +3,7 @@ import Footer from "../../footer/Footer.tsx";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { useParams } from "wouter";
+import {API_BASE_URL} from "../../config.ts";
 
 export default function PlaceDetailView() {
     const [, navigate] = useLocation();
@@ -10,7 +11,7 @@ export default function PlaceDetailView() {
     const [place, setPlace] = useState<any>(null);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/places/${id}`)
+        fetch(`${API_BASE_URL}/places/${id}`)
             .then(res => res.json())
             .then(data => setPlace(data))
             .catch(err => console.error("Failed to fetch place:", err));
@@ -54,7 +55,7 @@ export default function PlaceDetailView() {
                         onClick={async () => {
                             const username = localStorage.getItem("user");
                             if (!username) return;
-                            await fetch("http://localhost:3000/places/save", {
+                            await fetch(`${API_BASE_URL}/places/save`, {
                                 method: "POST",
                                 headers: { "Content-Type": "application/json" },
                                 body: JSON.stringify({ username, placeId: place.id }),

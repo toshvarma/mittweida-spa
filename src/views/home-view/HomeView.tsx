@@ -12,7 +12,7 @@ export default function HomeView() {
         <div className="home">
             <div className="background-wrapper">
                 <img
-                    src="/assets/mittweidahomescreen.jpg"
+                    src="/mittweidahomescreen.jpg"
                     alt="Background"
                     className="home-background"
                 />

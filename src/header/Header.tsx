@@ -24,7 +24,7 @@ export default function Header({ }: HeaderProps) {
     return (
         <header className="header">
             <div onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
-                <img src="/assets/mittlogo.png" alt="Mittweida Logo" className="header-logo" />
+                <img src="/mittlogo.png" alt="Mittweida Logo" className="header-logo" />
             </div>
 
             <div className="header-buttons">

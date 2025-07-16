@@ -5,15 +5,22 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // CORS
+
   app.enableCors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175'],
+    origin: [
+      'http://localhost:5173',
+      'http://10.0.101.246:5173',
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
   });
+  // app.enableCors({
+  //   origin: '*',
+  // });
+  // for troubleshooting, use this version of enableCors
 
-  // 🔧 Swagger setup
+
   const config = new DocumentBuilder()
       .setTitle('Myttweida API')
       .setDescription('Backend for locations and login')
@@ -21,8 +28,7 @@ async function bootstrap() {
       .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api', app, document); // << mounts Swagger at /api
-
-  await app.listen(3000);
+  SwaggerModule.setup('api', app, document);
+  await app.listen(3000, '0.0.0.0');
 }
 bootstrap();

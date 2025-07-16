@@ -4,6 +4,8 @@ import Button from "../../buttons/Button.tsx";
 import { useLocation } from "wouter";
 import { useState } from "react";
 
+import {API_BASE_URL} from "../../config.ts";
+
 export default function LoginView() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -12,7 +14,7 @@ export default function LoginView() {
 
     const login = async (user: string, pass: string) => {
         try {
-            const response = await fetch("http://localhost:3000/auth/login", {
+            const response = await fetch(`${API_BASE_URL}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username: user, password: pass }),
@@ -36,7 +38,7 @@ export default function LoginView() {
 
     const devLogin = async (user: string) => {
         try {
-            const response = await fetch(`http://localhost:3000/auth/user/${user}`);
+            const response = await fetch(`${API_BASE_URL}/auth/user/${user}`);
             const data = await response.json();
             localStorage.setItem("user", data.username);
             localStorage.setItem("profileImage", data.profileImage);
@@ -72,7 +74,7 @@ export default function LoginView() {
             </div>
 
             <div className="dev-login-panel">
-                <img src="/assets/mittdeview.png" alt="dev gear" className="dev-icon" />
+                <img src="/mittdeview.png" alt="dev gear" className="dev-icon" />
                 <h2 className="dev-title">developer view only</h2>
                 <p className="dev-paragraph">
                     to properly test the website, you can choose an account to proceed with here.
@@ -81,7 +83,7 @@ export default function LoginView() {
                 </p>
 
                 <div className="dev-account" onClick={() => devLogin("admin1")}>
-                    <img src="/assets/mittadmin.png" alt="admin1" />
+                    <img src="/mittadmin.png" alt="admin1" />
                     <div className="dev-info">
                         <div className="dev-username">admin1</div>
                         <div className="dev-password">qwerty</div>
@@ -90,7 +92,7 @@ export default function LoginView() {
                 </div>
 
                 <div className="dev-account" onClick={() => devLogin("admin2")}>
-                    <img src="/assets/mittadmin.png" alt="admin2" />
+                    <img src="/mittadmin.png" alt="admin2" />
                     <div className="dev-info">
                         <div className="dev-username">admin2</div>
                         <div className="dev-password">BREAKFAST</div>
@@ -99,7 +101,7 @@ export default function LoginView() {
                 </div>
 
                 <div className="dev-account" onClick={() => devLogin("ramenLover2102")}>
-                    <img src="/assets/mittramen.png" alt="ramen" />
+                    <img src="/mittramen.png" alt="ramen" />
                     <div className="dev-info">
                         <div className="dev-username">ramenLover2102</div>
                         <div className="dev-password">zzwqICE03qs23#</div>

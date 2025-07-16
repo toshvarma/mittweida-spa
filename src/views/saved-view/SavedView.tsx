@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import LocationCard from "../../components/location-card/LocationCard.tsx";
 import Footer from "../../footer/Footer.tsx";
 
+import {API_BASE_URL} from "../../config.ts";
+
 interface Place {
     id: string;
     title: string;
@@ -18,7 +20,7 @@ export default function SavedView() {
         const username = localStorage.getItem("user");
         if (!username) return;
 
-        const res = await fetch(`http://localhost:3000/places/saved/${username}`);
+        const res = await fetch(`${API_BASE_URL}/places/saved/${username}`);
         const data = await res.json();
         setPlaces(data);
     };
@@ -27,7 +29,7 @@ export default function SavedView() {
         const username = localStorage.getItem("user");
         if (!username) return;
 
-        await fetch(`http://localhost:3000/places/unsave`, {
+        await fetch(`${API_BASE_URL}/places/unsave`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ username, placeId }),

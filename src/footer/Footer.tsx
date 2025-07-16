@@ -25,8 +25,8 @@ export default function Footer({ currentPage }: FooterProps) {
                 </button>
             </div>
             <div className="footer-right">
-                <img src="/assets/mittfacebook.png" alt="Facebook" />
-                <img src="/assets/mittstagram.png" alt="Instagram" />
+                <img src="/mittfacebook.png" alt="Facebook" />
+                <img src="/mittstagram.png" alt="Instagram" />
             </div>
         </footer>
     );

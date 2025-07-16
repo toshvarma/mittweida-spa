@@ -6,6 +6,8 @@ import LocationCard from "../../components/location-card/LocationCard.tsx";
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 
+import {API_BASE_URL} from "../../config.ts";
+
 interface Place {
     id: string;
     title: string;
@@ -24,7 +26,7 @@ export default function SearchView() {
     useEffect(() => {
         const fetchPlaces = async () => {
             try {
-                const res = await fetch("http://localhost:3000/places");
+                const res = await fetch(`${API_BASE_URL}/places`);
                 const data = await res.json();
 
                 setAllPlaces(data);
@@ -65,7 +67,7 @@ export default function SearchView() {
                 {/* Search Bar */}
                 <div className="search-bar-wrapper">
                     <div className="search-bar">
-                        <img src="/assets/mittsearchicon.png" alt="Search Icon" />
+                        <img src="/mittsearchicon.png" alt="Search Icon" />
                         <input
                             type="text"
                             placeholder="Enter search term..."
