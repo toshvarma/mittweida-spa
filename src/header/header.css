@@ -1,0 +1,47 @@
+.header {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 16px;
+    background-color: rgba(0, 0, 0, 0.46);
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+    gap: 16px;
+    justify-content: flex-start; /* 👈 Aligns with logo instead of centering all content */
+}
+
+.header-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+    margin-left: 16px;
+}
+
+.header-buttons button {
+    background: none;
+    color: #b19b62;
+    font-family: "General Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.header-profile {
+    margin-left: auto; /* 👈 Pushes profile icon to the far right */
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+}

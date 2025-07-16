@@ -1,0 +1,46 @@
+
+.title-card {
+    width: 90vw;
+    max-width: none;
+    margin: 0 auto 24px;
+    border-radius: 12px;
+    height: 180px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.title-card-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+}
+
+.read-more {
+    align-self: flex-end;
+    background-color: transparent;
+    border: 0.094rem solid #64ffda;
+    padding: 10px 20px;
+    color: #64ffda;
+    border-radius: 8px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+.read-more:hover {
+    background-color: rgba(0,0,0,1);
+}
+
+
+
+

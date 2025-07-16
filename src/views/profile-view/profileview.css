@@ -1,0 +1,29 @@
+.profile-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0a0e33;
+    padding-top: 100px;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; /* take up remaining vertical space */
+}
+
+.greeting {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 32px;
+}
+
+.username {
+    font-weight: 700;
+    color: #ccd6f6;
+    display: inline;
+}

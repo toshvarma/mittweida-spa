@@ -1,0 +1,55 @@
+.map {
+    height: 100%;
+    width: 100%;
+}
+
+.leaflet-top.leaflet-left {
+    top: 100px !important; /* Adjust to match your header height */
+    z-index: 500; /* Keep them above the map but below your header */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 160px;
+    color: black; /* override default leaflet blue/cyan */
+}
+
+.popup-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+}
+
+.popup-thumb {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    object-fit: cover;
+}
+
+.popup-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.popup-button {
+    font-size: 10px;
+    background-color: #231F5B;
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.popup-button:hover {
+    background-color: #130B3A;
+}
+

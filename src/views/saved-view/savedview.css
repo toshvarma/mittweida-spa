@@ -1,0 +1,63 @@
+.saved-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0a0e33;
+    color: white;
+    font-family: "General Sans", sans-serif;
+}
+
+.saved-content {
+    flex: 1;
+    padding: 120px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saved-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.no-saved {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    margin-top: 24px;
+}
+
+.saved-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.saved-card-wrapper {
+    position: relative;
+}
+
+.unsave-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    color: #231F5B;
+    border: none;
+    font-size: 20px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s ease;
+}
+
+.unsave-button:hover {
+    background: white;
+}

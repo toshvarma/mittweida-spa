@@ -1,0 +1,213 @@
+@media (max-width: 480px) {
+    .dev-account {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .dev-login-tag {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+.search-view {
+    padding-top: 100px; /* ensure content starts below the fixed header */
+    background-color: #0a192f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "General Sans", sans-serif;
+}
+
+.login-container {
+    background-color: #112240;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+strong {
+    color: #64ffda;
+}
+
+.text-input {
+    background-color: transparent;
+    border: 1px solid #ccd6f6;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    width: 100%;
+}
+
+.text-input:focus {
+    outline: none;
+    border-color: #64ffda;
+}
+
+.login-button {
+    background-color: #64ffda;
+    border: none;
+    border-radius: 24px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #0a192f;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 8px;
+}
+
+.login-button:hover {
+    background-color: #52e0c4;
+}
+
+.forgot-password {
+    font-size: 0.85rem;
+    text-align: right;
+    color: #8892b0;
+    cursor: pointer;
+    margin-top: -8px;
+    margin-bottom: 16px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.error-text {
+    color: #ff7b7b;
+    font-size: 0.85rem;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.signup-prompt {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 24px;
+    color: #8892b0;
+}
+
+.signup-link {
+    color: #64ffda;
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.dev-login-panel {
+    margin-top: 40px;
+    text-align: center;
+    padding: 0 16px;
+    color: white;
+    max-width: 400px;
+    width: 100%;
+}
+
+.dev-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.dev-title {
+    font-size: 20px;
+    line-height: 95%;
+    margin-bottom: 16px;
+    text-transform: lowercase;
+    font-weight: 600;
+}
+
+.dev-paragraph {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 32px;
+    color: #ccd6f6;
+}
+
+.dev-account {
+    background-color: #000;
+    opacity: 0.85;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    position: relative;
+    color: white;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.dev-account img {
+    width: 28px;
+    height: 28px;
+    margin-right: 12px;
+}
+
+.dev-info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.dev-username {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dev-password {
+    font-size: 12px;
+    opacity: 0.75;
+}
+
+.dev-login-tag {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    background-color: #B19B62;
+    color: #130B3A;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 6px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
+    flex-shrink: 0;
+}
+
+
+.dev-continue {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    line-height: 155%;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    cursor: pointer;
+}

@@ -1,0 +1,104 @@
+.place-detail-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0a0e33;
+    font-family: "General Sans", sans-serif;
+    color: white;
+}
+
+.place-detail-content {
+    flex-grow: 1;
+    padding: 120px 16px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.place-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.carousel-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #231F5B;
+}
+
+.dot.active {
+    background-color: #130B3A;
+}
+
+.place-description {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    margin-bottom: 24px;
+    max-width: 480px;
+}
+
+.separator {
+    width: 100%;
+    max-width: 480px;
+    border: none;
+    height: 1px;
+    background-color: #B19B62;
+    margin-bottom: 24px;
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.directions {
+    background-color: #5047C8;
+}
+
+.save {
+    background-color: #5047C8;
+}
+
+.go-back {
+    background-color: #B19B62;
+}
